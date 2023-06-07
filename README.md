@@ -90,7 +90,7 @@ echo CHtml::dropDownList('ProdFeatureShop[pfs_feature]', $select, $res, $opt);
 
 
 #### Гибкий поиск в фильтре CGridView. Символ % (LIKE)
-Для того, чтобы в столбце таблицы можно было использовать гибкий поиск, например: ##%BRIDGESTONE%летняя%## необходимо параметр %%escape%% переключить в %%false%%
+Для того, чтобы в столбце таблицы можно было использовать гибкий поиск, например: **%BRIDGESTONE%летняя%** необходимо параметр `escape` переключить в `false`
 
 ```php
 $criteria->compare('ps_name', $this->ps_name, true, 'AND', false);
@@ -112,7 +112,7 @@ $criteria->compare('ps_name', $this->ps_name, true, 'AND', false);
 
 
 #### NOT LIKE в condition
-Найти все категории, кроме той у которой %%cat_yml_id == 777%%
+Найти все категории, кроме той у которой `cat_yml_id == 777`
 ```php
 PriceYmlCat::model()->deleteAll([
     'condition' => 'cat_price = :cat_price AND cat_yml_id NOT LIKE :cat_yml_id',
@@ -270,7 +270,7 @@ public function rules()
 }
 ```
 
-4. Добавить атрибут в %%search()%%
+4. Добавить атрибут в `search()`
 Если в ячейке используется **одно поле**:
 ```php
 $criteria->with = ['cat_shop'];
@@ -324,7 +324,7 @@ $this->widget('zii.widgets.grid.CGridView', [
 ```bash
 docker ps
 ```
-Столбцы ##CONTAINER ID## или ##NAMES## помогут нам в идентификации контейнера с которым будем производить манипуляции. Чтобы подключиться к контейнеру:
+Столбцы **CONTAINER ID** или **NAMES** помогут нам в идентификации контейнера с которым будем производить манипуляции. Чтобы подключиться к контейнеру:
 ```bash
 docker exec -it CONTAINER_ID bash
 ```
