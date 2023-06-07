@@ -301,7 +301,7 @@ $this->widget('zii.widgets.grid.CGridView', [
 ]);
 ```
 Если в ячейке используется **несколько полей**:
-```(php
+```php
 $this->widget('zii.widgets.grid.CGridView', [
     'dataProvider' => $model->search(),
     'filter'       => $model,
