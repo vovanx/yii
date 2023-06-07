@@ -199,7 +199,7 @@ if (isset($_GET['pageSize'])) {
 ```
 
 **Вьюшка**
-```(html)
+```html
 <?php
 $pageSize         = Yii::app()->user->getState('pageSize', Yii::app()->params['defaultPageSize']);
 $pageSizeDropDown = CHtml::dropDownList(
