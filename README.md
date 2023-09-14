@@ -14,6 +14,17 @@ echo Yii::t('app', 'товар|товара|товаров|товара', 1);
 3. 0, 5\~19, 100, 1000, 10000, 100000...
 4. 0.0\~1.5, 10.0, 100.0...
 
+### jQuery Yii GridView plugin file
+Методы
+* $.fn.yiiGridView.getChecked
+* $.fn.yiiGridView.getSelection
+* $.fn.yiiGridView.update
+* $.fn.yiiGridView.getColumn
+* $.fn.yiiGridView.getRow
+* $.fn.yiiGridView.getUrl
+* $.fn.yiiGridView.getKey
+* 
+`protected/vendor/yiisoft/yii/framework/zii/widgets/assets/gridview/jquery.yiigridview.js`
 
 ### Удаление строки в CGridView
 ```php
