@@ -23,7 +23,7 @@ echo Yii::t('app', 'товар|товара|товаров|товара', 1);
 * $.fn.yiiGridView.getRow
 * $.fn.yiiGridView.getUrl
 * $.fn.yiiGridView.getKey
-* 
+
 `protected/vendor/yiisoft/yii/framework/zii/widgets/assets/gridview/jquery.yiigridview.js`
 
 ### Удаление строки в CGridView
