@@ -42,8 +42,20 @@ $this->widget('zii.widgets.grid.CGridView', array(
 ));
 ```
 Для получения выбранных значений чекбоксов необходимо использовать `$.fn.yiiGridView.getChecked`
-```javascript
-var selectedIds = $.fn.yiiGridView.getChecked('my-grid-id', 'my-checkbox-id');
+```html
+<script>
+    // Выбираем отмеченные чекбоксы
+    $(document).on('click', '.class-btn', function (e) {
+        e.preventDefault();
+
+        // Собираем ID всех отмеченных чекбоксов
+        $.fn.yiiGridView.getChecked('my-grid-id', 'my-checkbox-id');
+        // Преобразовываем в строку (разделитель — запятая)
+        var ids = selectedIds.join(',')
+        // Переход на страницу в парметры которой передаём несколько ID
+        window.location.href = '<?php echo Yii::app()->createUrl('/admin/', ['ap' => $a, 'action' => 'action',]) ?>/ids/' + ids;
+    });
+</script>
 ```
 
 
