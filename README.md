@@ -29,17 +29,17 @@ echo Yii::t('app', 'товар|товара|товаров|товара', 1);
 #### Примеры использования
 ##### Получить значения выбранных чекбоксов
 ```php
-$this->widget('zii.widgets.grid.CGridView', array(
-    'id' => 'my-grid-id',
+$this->widget('zii.widgets.grid.CGridView', [
+    'id'           => 'my-grid-id',
     'dataProvider' => $dataProvider,
-    'columns' => array(
-        array(
+    'columns'      => [
+        [
             'class' => 'CCheckBoxColumn',
-            'id' => 'my-checkbox-id',
-        ),
+            'id'    => 'my-checkbox-id',
+        ],
         // other columns
-    ),
-));
+    ],
+]);
 ```
 Для получения выбранных значений чекбоксов необходимо использовать `$.fn.yiiGridView.getChecked`
 ```html
