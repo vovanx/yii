@@ -24,7 +24,28 @@ echo Yii::t('app', 'товар|товара|товаров|товара', 1);
 * $.fn.yiiGridView.getUrl
 * $.fn.yiiGridView.getKey
 
-`protected/vendor/yiisoft/yii/framework/zii/widgets/assets/gridview/jquery.yiigridview.js`
+Файл-источник для понимания работы функций: `protected/vendor/yiisoft/yii/framework/zii/widgets/assets/gridview/jquery.yiigridview.js`
+
+#### Примеры использования
+##### Получить значения выбранных чекбоксов
+```php
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'my-grid-id',
+    'dataProvider' => $dataProvider,
+    'columns' => array(
+        array(
+            'class' => 'CCheckBoxColumn',
+            'id' => 'my-checkbox-id',
+        ),
+        // other columns
+    ),
+));
+```
+Для получения выбранных значений чекбоксов необходимо использовать `$.fn.yiiGridView.getChecked`
+```javascript
+var selectedIds = $.fn.yiiGridView.getChecked('my-grid-id', 'my-checkbox-id');
+```
+
 
 ### Удаление строки в CGridView
 ```php
