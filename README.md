@@ -1,6 +1,10 @@
 ### Полезное по Yii
 [Сборник советов для Yii1Сборник советов для Yii1](http://docs.mirocow.com/doku.php?id=yii:tips)
 
+### Путь к каталогу assets
+Путь: `Yii::app()->assetManager->basePath` — (/var/www/www-root/data/www/chepochem.com/assets)  
+URL: `Yii::app()->assetManager->baseUrl` — (/assets)
+
 ### Формат для множественных форм
 [Источник](https://www.yiiframework.com/doc/guide/1.1/ru/topics.i18n)
 
@@ -143,7 +147,7 @@ $criteria->compare('ps_name', $this->ps_name, true, 'AND', false);
 
 #### Обернуть в span свойство в CGridView
 ```php
-'value' = >function($data) {
+'value' => function($data) {
     return '<span>' . CHtml::encode($data->column_name) . '</span>';
 },
 ```
