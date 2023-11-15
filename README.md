@@ -1,6 +1,19 @@
 ### Полезное по Yii
 [Сборник советов для Yii1Сборник советов для Yii1](http://docs.mirocow.com/doku.php?id=yii:tips)
 
+### В activeCheckBoxList выделить несколько предустановленных значений
+Для `Chtml::checkBoxList` проблемы нет, там предусмотрен отдельный параметр.  
+Для `$form→checkBoxList()` необходимо перед рендером для атрибута необходимо присвоить массив значений, которые необходимо выделить.  
+Пример кода, если в БД значения хранятся через запятую:
+```php
+if ( ! empty($model->uxd_value))
+    // Предустановленные значения для activeCheckBoxList
+    $model->uxd_value = explode(',', $model->uxd_value);
+```
+Затем в `$form→checkBoxList()` передать $model
+    
+
+
 ### Путь к каталогу assets
 Путь: `Yii::app()->assetManager->basePath` — (/var/www/www-root/data/www/chepochem.com/assets)  
 URL: `Yii::app()->assetManager->baseUrl` — (/assets)
