@@ -20,13 +20,13 @@ echo Yii::t('app', 'товар|товара|товаров|товара', 1);
 
 ### jQuery Yii GridView plugin file
 Методы
-* $.fn.yiiGridView.getChecked
-* $.fn.yiiGridView.getSelection
-* $.fn.yiiGridView.update
-* $.fn.yiiGridView.getColumn
-* $.fn.yiiGridView.getRow
-* $.fn.yiiGridView.getUrl
-* $.fn.yiiGridView.getKey
+* `$('#' + id).yiiGridView('getKey', row);`
+* `$('#' + id).yiiGridView('getUrl');`
+* `$('#' + id).yiiGridView('getRow', row);`
+* `$('#' + id).yiiGridView('getColumn', column);`
+* `$('#' + id).yiiGridView('update', options);`
+* `$('#' + id).yiiGridView('getSelection');`
+* `$('#' + id).yiiGridView('getChecked', column_id);`
 
 Файл-источник для понимания работы функций: `protected/vendor/yiisoft/yii/framework/zii/widgets/assets/gridview/jquery.yiigridview.js`
 
@@ -247,7 +247,7 @@ if (isset($_GET['pageSize'])) {
 ```
 
 **Вьюшка**
-```html
+```php
 <?php
 $pageSize         = Yii::app()->user->getState('pageSize', Yii::app()->params['defaultPageSize']);
 $pageSizeDropDown = CHtml::dropDownList(
@@ -260,7 +260,8 @@ $pageSizeDropDown = CHtml::dropDownList(
     ]
 );
 ?>
-
+```
+```html
 <div class="row mb-3">
     <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
         <div class="me-2">
